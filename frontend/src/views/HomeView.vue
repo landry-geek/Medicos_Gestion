@@ -4,9 +4,9 @@
             <h1 class="text-center  pt-7 text-white text-xl font-bold drop-shadow-lg">MEDICOS APP</h1>     
             
             <div class="text-center space-y-2 pt-35" >
-                <div class="px-4 py-3 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition duration-200 cursor-pointer" @click="pageActive='Formulaire'">formulaire</div>
-                <div class="px-4 py-3 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition duration-200 cursor-pointer" @click="pageActive='Liste'">liste</div>
-                <div class="px-4 py-3 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition duration-200 cursor-pointer" @click="pageActive='Bilan'">bilan</div>
+                <div class="px-4 py-3 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition duration-200 cursor-pointer" @click="pageActive='FormulaireView'">formulaire</div>
+                <div class="px-4 py-3 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition duration-200 cursor-pointer" @click="pageActive='ListeView'">liste</div>
+                <div class="px-4 py-3 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition duration-200 cursor-pointer" @click="pageActive='BilanView'">bilan</div>
                 
             </div>
         </div>
@@ -17,9 +17,9 @@
         <div class="bg-gradient-to-r from-purple-400 to-blue-300  w-300 h-screen"> 
             
           
-            <formulaire v-if="pageActive === 'Formulaire'" />
-            <liste v-if="pageActive === 'Liste'" />
-            <bilan v-if="pageActive === 'Bilan'" />
+            <formulaire v-if="pageActive === 'FormulaireView'" />
+            <liste v-if="pageActive === 'ListeView'" />
+            <bilan v-if="pageActive === 'BilanView' " />
         
                         
            
@@ -33,19 +33,19 @@
 </template>
 
 <script>
-import Bilan from '@/components/Bilan.vue';
-import Liste from '@/components/Liste.vue';
-import Formulaire from '@/components/Formulaire.vue';
+import BilanView from '@/components/BilanView.vue';
+import ListeView from '@/components/ListeView.vue';
+import FormulaireView from '@/components/FormulaireView.vue';
 export default{
     data() {
     return {
-      pageActive: 'Formulaire'
+      pageActive: 'FormulaireView'
     }
 },
     components : {
-        Formulaire,
-        Liste,
-        Bilan
+        FormulaireView,
+        ListeView,
+        BilanView
     }
     
 }
