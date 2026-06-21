@@ -1,0 +1,27 @@
+# Dependencies
+**/node_modules/
+**/vendor/
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Laravel
+backend/storage/*.key
+backend/storage/logs/*
+backend/storage/framework/cache/*
+backend/storage/framework/sessions/*
+backend/storage/framework/views/*
+backend/bootstrap/cache/*
+backend/public/storage
+
+# Frontend build
+frontend/dist/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json

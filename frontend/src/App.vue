@@ -1,11 +1,19 @@
-<script setup></script>
+<script setup>
+import { onMounted } from 'vue'
+import { api } from './lib/api'
+
+onMounted(async () => {
+  try {
+    const { data } = await api.get('/ping')
+    console.log(data) // devrait afficher { status: "ok" }
+  } catch (error) {
+    console.error('Erreur :', error)
+  }
+})
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <RouterView />
 </template>
 
 <style scoped></style>

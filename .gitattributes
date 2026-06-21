@@ -1,0 +1,4 @@
+# Normalise les fins de ligne pour éviter les conflits Windows/Mac/Linux
+* text=auto eol=lf
+
+*.bat text eol=crlf
