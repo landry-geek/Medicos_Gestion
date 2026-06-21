@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class MedecinController extends Controller
 {
-    //récuperer tous les Medecin
+    //récuperer tous les Medecins
     public function index(){
         $medecins = Medecin::all();
 
