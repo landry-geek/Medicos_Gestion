@@ -17,9 +17,9 @@
         <div class="bg-gradient-to-r from-purple-400 to-blue-300  w-300 h-screen"> 
             
           
-            <formulaire v-if="pageActive === 'FormulaireView'" />
-            <liste v-if="pageActive === 'ListeView'" />
-            <bilan v-if="pageActive === 'BilanView' " />
+            <FormulaireView v-if="pageActive === 'FormulaireView'" />
+            <ListeView v-if="pageActive === 'ListeView'" />
+            <BilanView v-if="pageActive === 'BilanView' " />
         
                         
            
