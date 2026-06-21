@@ -36,7 +36,6 @@
 import BilanView from '@/components/BilanView.vue';
 import ListeView from '@/components/ListeView.vue';
 import FormulaireView from '@/components/FormulaireView.vue';
-import FormulaireView from '@/components/FormulaireView.vue';
 export default{
     data() {
     return {
