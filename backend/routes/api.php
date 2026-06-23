@@ -14,12 +14,3 @@ Route::get('/medecins', [MedecinController::class, 'index']);
 Route::post('/medecins', [MedecinController::class, 'store']);
 Route::put('/medecins/{id}', [MedecinController::class, 'update']);
 Route::delete('/medecins/{id}', [MedecinController::class, 'destroy']);
-
-Route::get('/debug-db', function () {
-    return response()->json([
-        'default_connection' => config('database.default'),
-        'env_db_connection'  => env('DB_CONNECTION'),
-        'pgsql_database'     => config('database.connections.pgsql.database'),
-        'pgsql_host'         => config('database.connections.pgsql.host'),
-    ]);
-});
