@@ -1,4 +1,9 @@
 <template>
+
+        <div class="text-xs text-gray-400 text-right px-4 py-1 border-b border-gray-100">
+          👤 {{ auth?.user?.value?.name }}
+        </div>
+
 <div class=" w-[85vw] h-screen">
     <div class=" flex items-center justify-around p-5 gap-9 w-[85vw] h-40">
         <div class="bg-gray-700/80 backdrop-blur-sm p-6 rounded-2xl shadow-xl w-56 text-center border border-white/10">
@@ -98,8 +103,15 @@
 
 <script>
 import axios from "axios"
+import { inject } from 'vue'  // ← AJOUTER CETTE LIGNE
 
 export default {
+     // ⬇️ AJOUTER CETTE SECTION ⬇️
+    setup() {
+        const auth = inject('auth')
+        return { auth }
+    },
+    // ⬆️ FIN AJOUT ⬆️
    props: {
     medecins: {
         type: Array,

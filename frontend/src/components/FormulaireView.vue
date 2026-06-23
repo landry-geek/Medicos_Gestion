@@ -1,4 +1,7 @@
 <template>
+            <div class="text-xs text-gray-400 text-right px-4 py-1 border-b border-gray-100">
+    👤 {{ auth?.user?.value?.name }} ({{ auth?.user?.value?.role }})
+            </div>
     
     <div class="flex items-center justify-center min-h-screen bg-gradient-to-r from-purple-400 to-blue-300">
     <form  @submit.prevent="ajouterMedecin" class="shadow-[0_0_30px_rgba(168,85,247,0.5)] 
@@ -47,9 +50,17 @@
 <script>
 
 import axios from "axios"
+import { inject } from 'vue'
 
 export default 
 {
+
+   setup() {
+        const auth = inject('auth')
+        return { auth }
+    },
+
+
         // Ajouter dans les props
 props: {
     medecin: {

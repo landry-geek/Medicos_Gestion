@@ -1,6 +1,8 @@
 <script setup>
 import { onMounted } from 'vue'
 import { api } from './lib/api'
+import { inject } from 'vue'
+import { useRouter } from 'vue-router'
 
 onMounted(async () => {
   try {
@@ -10,10 +12,18 @@ onMounted(async () => {
     console.error('Erreur :', error)
   }
 })
+
+
+
+
 </script>
 
+
 <template>
-  <RouterView />
+   <RouterView />
+  
 </template>
+
+
 
 <style scoped></style>

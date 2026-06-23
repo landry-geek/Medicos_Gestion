@@ -1,9 +1,16 @@
 <template>
 
+
     <div  class="w-260 h-screen flex items-center justify-center">
+
         <div class="bg-white h-[70vh] w-[800px] 
         shadow-[0_0_60px_rgba(239,68,68,0.8)]
         overflow-hidden  flex flex-col rounded-lg shadow-lg">
+
+            <div class="text-xs text-gray-400 px-4 py-1 text-right border-b border-gray-100">
+            👤 {{ auth?.user?.value?.name }} ({{ auth?.user?.value?.role }})
+            </div>
+
             <div  class="bg-gray-400 flex items-center text-white">
                 <span class=" text-black  bg-green-100 font-bold w-16 px-2 py-1">Numed</span>
                 <span class=" text-black font-bold w-40 px-2 py-1">Nom</span>
@@ -51,8 +58,17 @@
 
 <script>
 import axios from "axios"
+import { inject } from 'vue'
 export default {
+    // ⬇️ AJOUTER CETTE SECTION ⬇️
+    setup() {
+        const auth = inject('auth')
+        return { auth }
+    },
+    // ⬆️ FIN AJOUT ⬆️
     props: {
+        
+
     medecins: {
         type: Array,
         default: () => []
